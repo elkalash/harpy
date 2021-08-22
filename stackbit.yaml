@@ -1,0 +1,410 @@
+stackbitVersion: ~0.3.0
+dataDir: ''
+models:
+  manifest:
+    type: data
+    label: Manifest
+    file: public/manifest.json
+    fields:
+      - type: string
+        name: short_name
+        label: Short Name
+      - type: string
+        name: name
+        label: Name
+      - type: list
+        name: icons
+        label: Icons
+        items:
+          type: object
+          fields:
+            - type: string
+              name: src
+              label: Src
+            - type: string
+              name: sizes
+              label: Sizes
+            - type: string
+              name: type
+              label: Type
+      - type: string
+        name: start_url
+        label: Start Url
+      - type: string
+        name: display
+        label: Display
+      - type: string
+        name: theme_color
+        label: Theme Color
+      - type: string
+        name: background_color
+        label: Background Color
+  about:
+    type: data
+    label: About
+    file: src/data/about.json
+    isList: true
+    items:
+      type: model
+      models:
+        - object_t1azsoa0yc
+        - object_he6c647ckh
+  blog:
+    type: data
+    label: Blog
+    file: src/data/blog.json
+    isList: true
+    items:
+      type: object
+      fields:
+        - type: number
+          name: id
+          label: Id
+          subtype: int
+        - type: string
+          name: className
+          label: Class Name
+        - type: object
+          name: media
+          label: Media
+          fields:
+            - type: image
+              name: thumb
+              label: Thumb
+            - type: image
+              name: largeImage
+              label: Large Image
+        - type: string
+          name: author
+          label: Author
+        - type: string
+          name: date
+          label: Date
+        - type: list
+          name: categories
+          label: Categories
+          items:
+            type: string
+        - type: string
+          name: title
+          label: Title
+        - type: string
+          name: excerpt
+          label: Excerpt
+        - type: list
+          name: body
+          label: Body
+          items:
+            type: markdown
+        - type: list
+          name: tags
+          label: Tags
+          items:
+            type: string
+  home:
+    type: data
+    label: Home
+    file: src/data/home.json
+    isList: true
+    items:
+      type: model
+      models:
+        - object_z7d23cgqs3
+        - object_s0ya2rwtvk
+        - object_zesm7s67gd
+        - object_pxartks92u
+        - object_6io35kpwwv
+        - object_v51zcv9mpo
+  project:
+    type: data
+    label: Project
+    file: src/data/project.json
+    isList: true
+    items:
+      type: object
+      fields:
+        - type: number
+          name: id
+          label: Id
+          subtype: int
+        - type: object
+          name: media
+          label: Media
+          fields:
+            - type: image
+              name: thumb
+              label: Thumb
+            - type: image
+              name: image
+              label: Image
+        - type: string
+          name: title
+          label: Title
+        - type: list
+          name: categories
+          label: Categories
+          items:
+            type: string
+        - type: markdown
+          name: challenge
+          label: Challenge
+        - type: string
+          name: date
+          label: Date
+        - type: markdown
+          name: team
+          label: Team
+        - type: string
+          name: service
+          label: Service
+        - type: string
+          name: subTitle
+          label: Sub Title
+        - type: list
+          name: body
+          label: Body
+          items:
+            type: markdown
+        - type: markdown
+          name: quote
+          label: Quote
+        - type: string
+          name: name
+          label: Name
+        - type: string
+          name: designation
+          label: Designation
+        - type: object
+          name: gallery
+          label: Gallery
+          fields:
+            - type: image
+              name: imageOne
+              label: Image One
+            - type: image
+              name: imageTwo
+              label: Image Two
+            - type: image
+              name: imageThree
+              label: Image Three
+  work:
+    type: data
+    label: Work
+    file: src/data/work.json
+    isList: true
+    items:
+      type: object
+      fields:
+        - type: number
+          name: id
+          label: Id
+          subtype: int
+        - type: object
+          name: media
+          label: Media
+          fields:
+            - type: image
+              name: thumb
+              label: Thumb
+        - type: string
+          name: title
+          label: Title
+        - type: list
+          name: categories
+          label: Categories
+          items:
+            type: string
+  object_t1azsoa0yc:
+    type: object
+    label: Object 1
+    fields:
+      - type: string
+        name: id
+        label: Id
+      - type: string
+        name: title
+        label: Title
+      - type: date
+        name: yearOne
+        label: Year One
+      - type: date
+        name: yearTwo
+        label: Year Two
+      - type: list
+        name: awardItem
+        label: Award Item
+        items:
+          type: object
+          fields:
+            - type: number
+              name: id
+              label: Id
+              subtype: int
+            - type: string
+              name: className
+              label: Class Name
+            - type: string
+              name: cate
+              label: Cate
+            - type: markdown
+              name: title
+              label: Title
+  object_he6c647ckh:
+    type: object
+    label: Object 2
+    fields:
+      - type: string
+        name: id
+        label: Id
+      - type: markdown
+        name: title
+        label: Title
+      - type: string
+        name: excerpt
+        label: Excerpt
+  object_z7d23cgqs3:
+    type: object
+    label: Object 3
+    fields:
+      - type: list
+        name: slider
+        label: Slider
+        items:
+          type: object
+          fields:
+            - type: number
+              name: id
+              label: Id
+              subtype: int
+            - type: image
+              name: backgroundImage
+              label: Background Image
+            - type: string
+              name: subTitle
+              label: Sub Title
+            - type: markdown
+              name: title
+              label: Title
+            - type: markdown
+              name: desc
+              label: Desc
+  object_s0ya2rwtvk:
+    type: object
+    label: Object 4
+    fields:
+      - type: list
+        name: brand
+        label: Brand
+        items:
+          type: object
+          fields:
+            - type: number
+              name: id
+              label: Id
+              subtype: int
+            - type: image
+              name: image
+              label: Image
+  object_zesm7s67gd:
+    type: object
+    label: Object 5
+    fields:
+      - type: list
+        name: iconBox
+        label: Icon Box
+        items:
+          type: object
+          fields:
+            - type: string
+              name: id
+              label: Id
+            - type: string
+              name: icon
+              label: Icon
+            - type: string
+              name: title
+              label: Title
+            - type: string
+              name: excerpt
+              label: Excerpt
+  object_pxartks92u:
+    type: object
+    label: Object 6
+    fields:
+      - type: list
+        name: funfact
+        label: Funfact
+        items:
+          type: object
+          fields:
+            - type: number
+              name: id
+              label: Id
+              subtype: int
+            - type: number
+              name: number
+              label: Number
+              subtype: int
+            - type: markdown
+              name: title
+              label: Title
+  object_6io35kpwwv:
+    type: object
+    label: Object 7
+    fields:
+      - type: list
+        name: testimonial
+        label: Testimonial
+        items:
+          type: object
+          fields:
+            - type: number
+              name: id
+              label: Id
+              subtype: int
+            - type: string
+              name: icon
+              label: Icon
+            - type: string
+              name: name
+              label: Name
+            - type: string
+              name: designation
+              label: Designation
+            - type: string
+              name: excerpt
+              label: Excerpt
+  object_v51zcv9mpo:
+    type: object
+    label: Object 8
+    fields:
+      - type: list
+        name: pricing
+        label: Pricing
+        items:
+          type: object
+          fields:
+            - type: number
+              name: id
+              label: Id
+              subtype: int
+            - type: string
+              name: badgeType
+              label: Badge Type
+            - type: string
+              name: badge
+              label: Badge
+            - type: string
+              name: icon
+              label: Icon
+            - type: string
+              name: title
+              label: Title
+            - type: markdown
+              name: price
+              label: Price
+            - type: list
+              name: pricingList
+              label: Pricing List
+              items:
+                type: markdown
